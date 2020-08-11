@@ -10,6 +10,16 @@ html {
   background: #082567;
 }
 
+/* on-load animation */
+body {
+  opacity: 0;
+  -webkit-transition: opacity 1.25s; /* Safari prior 6.1 */
+  transition: opacity 1.25s;
+}
+.ready body {
+  opacity: 1;
+}
+
 /* * * * */
 /* home  */
 /* * * * */
