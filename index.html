@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="home">
 <head>
   <title>Eileen Myles</title>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
 </head>
 <body>
-  <p class="test">arrow position: <span data-position="50%">1</span> | <span data-position="75%">2</span></p>
+  <p class="test">arrow position: <span data-position="125">1</span> | <span data-position="500">2</span></p>
 
   <img class="hand" src="./images/for-now.png" alt="drawing: a hand holding a book titled 'For Now'">
   <a class="arrow" href="./bio">enter</a> 
@@ -29,7 +29,7 @@
           { position } = span.dataset;
 
         span.addEventListener('click', () => {
-          arrow.style = `left: calc(${position} + 125px)`;
+          arrow.style = `left: calc(50% + ${position}px)`;
         })
       }
     });
