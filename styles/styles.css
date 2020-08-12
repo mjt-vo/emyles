@@ -1,4 +1,15 @@
 
+.test {
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.test span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* reset */
 body, h1, h2, h3, p, ul {
   margin: 0;
