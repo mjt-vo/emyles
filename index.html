@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
 </head>
 <body>
-  <p class="test">arrow position: <span data-position="50%">1</span> | <span data-position="75%">2</span></p>
   <img class="hand" src="./images/for-now.png" alt="drawing: a hand holding a book titled 'For Now'">
   <a class="arrow" href="#">enter</a>
   
@@ -19,19 +18,6 @@
         document.querySelector('html').classList.add('ready');
         clearInterval(addReady);
       }, 250);
-
-      const spans = document.querySelectorAll('span'),
-        arrow = document.querySelector('.arrow');
-
-      let i = 0;
-      for (i; i < spans.length; i++) {
-        const span = spans[i],
-          { position } = span.dataset;
-
-        span.addEventListener('click', () => {
-          arrow.style = `left: calc(${position} + 125px)`;
-        })
-      }
     });
   </script>
 </body>
