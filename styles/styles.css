@@ -10,8 +10,8 @@
 
 html {
   background: #082567;
-  color: #ffffb8;
-  font-family: 'Merriweather', serif;
+  color: #dcdba0;
+  font-family: 'Roboto Mono', monospace;
   font-size: 10px;
 }
 
@@ -20,7 +20,8 @@ body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  font-weight: 500;
+  line-height: 1rem;
+  font-weight: 300;
 }
 
       /* * * * * * */
@@ -43,22 +44,65 @@ section {
   box-sizing: border-box;
   padding: 45px 60px;
   width: calc(100% - 380px);
+  max-width: 1000px;
+}
+
+.container.flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container.flex > *:not(:last-child) {
+  margin-right: 20px;
+}
+.drawer.medium {
+  width: 200px;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+img.thumb {
+  width: 100px;
+  align-self: flex-start;
+  cursor: pointer;
 }
 
       /* * * * * * * */
       /* typography  */
       /* * * * * * * */
 
+h2, h3, p {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 h2 {
   font-size: 3rem;
+  line-height: 3rem;
+}
+h2:not(:first-child),
+.container + h3 {
+  margin-top: 60px;
 }
 
 h3 {
-  font-size: 2rem;
+  font-weight: 500;
 }
 
-p {
-  font-size: 1.5rem;
+a {
+  color: yellow;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #dcdba0;
+}
+
+.copyright {
+  margin-top: 120px;
 }
 
       /* * * */
