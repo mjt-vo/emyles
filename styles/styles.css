@@ -60,14 +60,23 @@ section {
 }
 
 img {
+  box-sizing: border-box;
   width: 100%;
+}
+img:not(.no-margin) {
   margin-bottom: 10px;
 }
-
+img:not(.no-border) {
+  border: 1px solid;
+}
 img.thumb {
+  margin-bottom: 20px;
   width: 100px;
   align-self: flex-start;
   cursor: pointer;
+}
+img.thumb:hover {
+  border-color: yellow;
 }
 
       /* * * * * * * */
