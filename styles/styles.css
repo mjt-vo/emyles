@@ -1,4 +1,5 @@
 @import url('./reset.css');
+@import url('./slides.css');
 
 .test {
   padding: 15px;

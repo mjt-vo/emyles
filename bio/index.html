@@ -7,6 +7,7 @@
   <meta name="keywords" content="Eileen Myles, poet, writer, artist, bio, cv, pics" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  <script language="javascript" type="text/javascript" src="../scripts/slides.js"></script>
 </head>
 <body>
   <nav>
@@ -45,21 +46,26 @@
 
     <h3>pictures</h3>
     <div class="container flex">
-      <img class="thumb" src="../images/thumb-4poets.jpg"/>
-      <img class="thumb" src="../images/thumb-phones.jpg"/>
-      <img class="thumb" src="../images/thumb-art.jpg"/>
-      <img class="thumb" src="../images/thumb-tree.jpg"/>
-      <img class="thumb" src="../images/thumb-zoo.jpg"/>
-      <img class="thumb" src="../images/thumb-mywindow.jpg"/>
-      <img class="thumb" src="../images/thumb-tables.jpg"/>
-      <img class="thumb" src="../images/thumb-south-american-poets.png"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-4poets.jpg" data-caption="4 poets" src="../images/thumb-4poets.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-phones.jpg" data-caption="phones" src="../images/thumb-phones.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-art.jpg" data-caption="art" src="../images/thumb-art.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-tree.jpg" data-caption="tree" src="../images/thumb-tree.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-zoo.jpg" data-caption="zoo" src="../images/thumb-zoo.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-mywindow.jpg" data-caption="my window" src="../images/thumb-mywindow.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-tables.jpg" data-caption="tables" src="../images/thumb-tables.jpg"/>
+      <img class="thumb slide-toggle" data-src="../images/slide-south-american-poets.png" data-caption="South American poets" src="../images/thumb-south-american-poets.png"/>
     </div>
    
     <p class="copyright">Copyright &#169; 2020 Eileen Myles</p>
   </section>
+
+  <!-- slides -->
+  <div class="slide-container"></div>
    
   <script type="text/javascript">
-    
+    window.addEventListener('DOMContentLoaded', () => {
+      initSlides();
+    });
   </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+.slide-container {
+  display: none;
+}
+
+.slide-container.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+}
+
+img.slide-image:not(.no-border) {
+  max-width: 300px;
+  border-width: 3px;
+}
+
+.slide-caption {
+  text-align: center;
+}
