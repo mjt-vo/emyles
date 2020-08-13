@@ -154,6 +154,7 @@ a:hover {
   }
 
   .arrow {
-    left: 75%;
+    left: auto;
+    right: 75px;
   }
 }
