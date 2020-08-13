@@ -56,10 +56,18 @@ section {
 .switch-container.active > *:nth-child(2) {
   display: block;
 }
-.switch.current {
+.switch {
   text-decoration: none;
   color: var(--color-main);
+}
+.switch:not(.current):hover {
+  color: yellow;
+}
+.switch.current {
   cursor: default;
+}
+.switch:not(.current) {
+  font-weight: 300;
 }
 
       /* * * * * */
