@@ -5,7 +5,7 @@
 
 html {
   background: #082567;
-  color: #dcdba0;
+  color: var(--color-main);
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
 }
@@ -15,6 +15,7 @@ html {
       /* * * * * * */
 
 :root {
+  --color-main: #dcdba0;
   --hover-transition: opacity 0.2s;
 }
 
@@ -39,6 +40,7 @@ section {
   width: 100%;
 }
 .container.flex > *:not(:last-child) {
+  align-self: flex-start;
   margin-right: 20px;
 }
 .drawer.medium {
@@ -56,9 +58,7 @@ img:not(.no-border) {
   border: 1px solid;
 }
 img.thumb {
-  margin-bottom: 20px;
   width: 100px;
-  align-self: flex-start;
   cursor: pointer;
 }
 img.thumb:hover {

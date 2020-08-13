@@ -23,3 +23,16 @@ img.slide-image:not(.no-border) {
 .slide-caption {
   text-align: center;
 }
+
+.slide-toggle {
+  margin-bottom: 20px;
+}
+.slide-toggle img:not(.no-margin) {
+  margin-bottom: 0;
+}
+
+.slide,
+.slide-toggle {
+  color: var(--color-main);
+  text-decoration: none;
+}
