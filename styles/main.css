@@ -145,4 +145,11 @@ a:hover {
     left: auto;
     right: 75px;
   }
+
+  .container.flex > *:not(:last-child) {
+    margin-right: 15px;
+  }
+  .slide-toggle {
+    margin-bottom: 15px;
+  }
 }
