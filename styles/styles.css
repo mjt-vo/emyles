@@ -148,3 +148,18 @@ a:hover {
 .arrow:hover {
   opacity: 0.75;
 }
+
+      /* * * * * */
+      /* mobile  */
+      /* * * * * */
+
+@media (max-width: 1000px) {
+  nav {
+    display: none;
+  }
+
+  section {
+    padding: 15px;
+    width: 100%;
+  }
+}
