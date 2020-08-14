@@ -1,6 +1,22 @@
 nav {
   padding: 30px 0 0 30px;
 }
+
+.nav-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  border: 1px solid var(--color-main);
+  border-radius: 25px;
+  box-shadow: -2px 4px 20px rgba(255,255,0,0.25);
+  height: 50px;
+  width: 50px;
+  text-indent: -10000px;
+  background: var(--color-bg);
+}
+
 .nav-link {
   display: block;
   width: 350px;
@@ -12,7 +28,6 @@ nav {
 .nav-link:hover {
   opacity: 0.5;
 }
-
 .nav-link.animals {
   height: 65px;
   /* src: images/nav/nav-animals.png */

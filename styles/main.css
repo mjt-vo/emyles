@@ -4,20 +4,21 @@
 @import url('./nav.css');
 @import url('./slides.css');
 
-html {
-  background: #082567;
-  color: var(--color-main);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10px;
-}
-
       /* * * * * * */
       /* variables */
       /* * * * * * */
 
 :root {
   --color-main: #dcdba0;
+  --color-bg: #082567;
   --hover-transition: opacity 0.2s;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-main);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
 }
 
       /* * * * * */
@@ -26,6 +27,10 @@ html {
 
 body {
   display: flex;
+}
+
+body > * {
+  align-self: flex-start;
 }
 
 section {
@@ -135,21 +140,37 @@ a:hover {
   nav {
     display: none;
   }
+  nav.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    min-height: 100%;
+    background: var(--color-bg);
+  }
 
   section {
     padding: 15px;
+    padding-top: 100px;
     width: 100%;
   }
 
   .arrow {
     left: auto;
-    right: 75px;
+    right: 50px;
   }
 
   .container.flex > *:not(:last-child) {
     margin-right: 15px;
   }
+
   .slide-toggle {
     margin-bottom: 15px;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 }
