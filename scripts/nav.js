@@ -1,8 +1,12 @@
 function initNav() {
   const nav = document.querySelector('nav'),
-    toggle = document.querySelector('.nav-toggle');
+    mainSection = document.querySelector('section.main'),
+    toggles = document.querySelectorAll('.nav-toggle');
 
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+  for (toggle of toggles) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mainSection.classList.toggle('hide');
+    });
+  }
 }

@@ -16,6 +16,9 @@ nav {
   text-indent: -10000px;
   background: var(--color-bg);
 }
+nav .nav-toggle {
+  position: absolute;
+}
 
 .nav-link {
   display: block;
