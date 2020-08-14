@@ -19,7 +19,8 @@ nav {
 
 .nav-link {
   display: block;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   text-indent: -10000px;
   background-size: contain;
   background-repeat: no-repeat;
