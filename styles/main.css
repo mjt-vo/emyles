@@ -142,10 +142,12 @@ a:hover {
   }
   nav.active {
     display: block;
-    position: absolute;
+    box-sizing: border-box;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 20;
+    padding: 50px 0 30px 60px;
     width: 100%;
     min-height: 100%;
     background: var(--color-bg);
@@ -153,7 +155,7 @@ a:hover {
 
   section {
     padding: 15px;
-    padding-top: 100px;
+    padding-top: 50px;
     width: 100%;
   }
 
