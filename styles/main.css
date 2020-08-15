@@ -76,8 +76,11 @@ nav {
   width: 60px;
   background: var(--color-bg);
   color: yellow;
-  box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: -10px 10px 20px rgba(0,0,0,0.5);
   transition: box-shadow 0.5s;
+}
+.active .nav-toggle {
+  box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
 }
 
 .nav-link {
@@ -253,7 +256,6 @@ img.thumb:hover {
   }
   .nav-toggle {
     display: block;
-    box-shadow: -10px 5px 10px rgba(0,0,0,0.5);
   }
 
   section {
