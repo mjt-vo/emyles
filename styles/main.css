@@ -77,6 +77,7 @@ nav {
   background: var(--color-bg);
   color: yellow;
   box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+  transition: box-shadow 0.5s;
 }
 
 .nav-link {
@@ -230,7 +231,7 @@ img.thumb:hover {
     z-index: 20;
     border-left: 1px solid yellow;
     border-bottom: 1px solid yellow;
-    padding: 60px 0 30px;
+    padding: 20px 0 30px;
     width: calc(100% - 70px);
     background: var(--color-bg);
     box-shadow: 0 0 0 rgba(0,0,0,0.5);
@@ -244,6 +245,10 @@ img.thumb:hover {
     flex-shrink: 0;
     max-width: 350px;
     width: 100%;
+  }
+  .nav-toggle {
+    display: block;
+    box-shadow: -10px 5px 10px rgba(0,0,0,0.5);
   }
 
   section {
@@ -263,9 +268,5 @@ img.thumb:hover {
 
   .slide-toggle {
     margin-bottom: 15px;
-  }
-
-  .nav-toggle {
-    display: block;
   }
 }
