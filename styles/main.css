@@ -70,17 +70,19 @@ nav {
   top: 0;
   left: -60px;
   border: none;
-  border-left: 1px solid yellow;
-  border-bottom: 1px solid yellow;
+  border-left: 1px solid orange;
+  border-bottom: 1px solid orange;
   height: 60px;
   width: 60px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  color: orange;
   background: var(--color-bg);
-  color: yellow;
   box-shadow: -10px 10px 20px rgba(0,0,0,0.5);
   transition: box-shadow 0.5s;
 }
 .active .nav-toggle {
-  box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+  box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
 }
 
 .nav-link {
@@ -232,9 +234,9 @@ img.thumb:hover {
     top: 0;
     left: 100%;
     z-index: 20;
-    border-left: 1px solid yellow;
-    border-bottom: 1px solid yellow;
-    padding: 25px 0 15px;
+    border-left: 1px solid orange;
+    border-bottom: 1px solid orange;
+    padding: 20px;
     width: calc(100% - 70px);
     background: var(--color-bg);
     box-shadow: 0 0 0 rgba(0,0,0,0.5);
