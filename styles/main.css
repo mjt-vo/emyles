@@ -236,7 +236,7 @@ img.thumb:hover {
     z-index: 20;
     border-left: 1px solid orange;
     border-bottom: 1px solid orange;
-    padding: 20px 30px;
+    padding: 20px 20px;
     width: calc(100% - 70px);
     background: var(--color-bg);
     box-shadow: 0 0 0 rgba(0,0,0,0.5);
