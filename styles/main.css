@@ -141,13 +141,13 @@ nav {
       /* typography  */
       /* * * * * * * */
 
-h2, h3, p {
+h1, h2, h3, p {
   margin-bottom: 20px;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-h2 {
+h1, h2 {
   font-size: 3rem;
   line-height: 3rem;
 }
