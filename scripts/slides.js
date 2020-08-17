@@ -7,31 +7,6 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
-  function handleSwipe() {
-    let touchstartX = 0,
-      touchendX = 0;
-
-    const slide = document.querySelector('.slide');
-
-    slide.addEventListener('touchstart', (e) => {
-      touchstartX = e.changedTouches[0].screenX;
-    }, false);
-
-    slide.addEventListener('touchend', (e) => {
-      touchendX = e.changedTouches[0].screenX;
-      handleTouch();
-    }, false); 
-
-    function handleTouch() {
-      if (touchendX < touchstartX) {
-        appendSlide(slides[currentNextIdx]);
-      }
-      if (touchendX > touchstartX) {
-        appendSlide(slides[currentPrevIdx]);
-      }
-    }
-  }
-
   function appendSlide(slide) {
     const {
       src,
@@ -47,11 +22,9 @@ function initSlides() {
 
     // append slide
     container.innerHTML = `<a href="#" class="slide">
-      <div>
         <img class="slide-image" src="${src}" alt="${caption}"/>
-        <p class="slide-caption">${caption}</p>
-      </div>
-    </a>`;
+      </a>
+      <p class="slide-caption">${caption}</p>`;
 
     // use slide to advance to next slide
     document.querySelector('.slide').addEventListener('click', (e) => {
@@ -59,8 +32,6 @@ function initSlides() {
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
     });
-
-    handleSwipe();
   }
 
   function closeSlides() {
