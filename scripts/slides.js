@@ -11,6 +11,8 @@ function initSlides() {
     let touchstartX = 0,
       touchendX = 0;
 
+    const slide = document.querySelector('.slide');
+
     slide.addEventListener('touchstart', function(event) {
       touchstartX = event.changedTouches[0].screenX;
     }, false);
