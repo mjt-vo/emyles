@@ -7,33 +7,6 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
-  // function handleSwipe(slide, nextSlide, prevSlide) {
-  //   alert('hello, world!');
-
-  //   let touchstartX = 0,
-  //     touchendX = 0;
-
-  //   slide.addEventListener('touchstart', function(event) {
-  //     touchstartX = event.screenX;
-  //   }, false);
-
-  //   slide.addEventListener('touchend', function(event) {
-  //     touchendX = event.screenX;
-  //     handleTouch();
-  //   }, false); 
-
-  //   function handleTouch() {
-  //     if (touchendX < touchstartX) {
-  //       alert('left')
-  //       appendSlide(prevSlide);
-  //     }
-  //     if (touchendX > touchstartX) {
-  //       alert('right')
-  //       appendSlide(nextSlide);
-  //     }
-  //   }
-  // }
-
   function appendSlide(slide) {
     const {
       src,
@@ -55,17 +28,12 @@ function initSlides() {
       </div>
     </a>`;
 
-    const slideElm = document.querySelector('.slide');
-
     // use slide to advance to next slide
-    slideElm.addEventListener('click', (e) => {
+    document.querySelector('.slide').addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
     });
-
-    alert('hello, world');
-    // handleSwipe(slideElm, slides[nextIdx], slides[prevIdx]);
   }
 
   function closeSlides() {
