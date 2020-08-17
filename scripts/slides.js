@@ -19,17 +19,17 @@ function initSlides() {
 
     slide.addEventListener('touchend', (e) => {
       touchendX = e.changedTouches[0].screenX;
-      // handleTouch();
+      handleTouch();
     }, false); 
 
-    // function handleTouch() {
-    //   if (touchendX < touchstartX) {
-    //     appendSlide(prevSlide);
-    //   }
-    //   if (touchendX > touchstartX) {
-    //     appendSlide(nextSlide);
-    //   }
-    // }
+    function handleTouch() {
+      if (touchendX < touchstartX) {
+        appendSlide(prevSlide);
+      }
+      if (touchendX > touchstartX) {
+        appendSlide(nextSlide);
+      }
+    }
   }
 
   function appendSlide(slide) {
