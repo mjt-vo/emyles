@@ -7,11 +7,11 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
-  function handleSwipe(nextSlide, prevSlide) {
+  function handleSwipe(slide, nextSlide, prevSlide) {
+    alert('hello, world!');
+    
     let touchstartX = 0,
       touchendX = 0;
-
-    const slide = document.querySelector('.slide');
 
     slide.addEventListener('touchstart', function(event) {
       touchstartX = event.screenX;
@@ -55,14 +55,16 @@ function initSlides() {
       </div>
     </a>`;
 
+    const slideElm = document.querySelector('.slide');
+
     // use slide to advance to next slide
-    document.querySelector('.slide').addEventListener('click', (e) => {
+    slideElm.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
     });
 
-    handleSwipe(slides[nextIdx], slides[prevIdx]);
+    handleSwipe(slideElm, slides[nextIdx], slides[prevIdx]);
   }
 
   function closeSlides() {
