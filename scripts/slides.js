@@ -14,19 +14,21 @@ function initSlides() {
     const slide = document.querySelector('.slide');
 
     slide.addEventListener('touchstart', function(event) {
-        touchstartX = event.screenX;
+      touchstartX = event.screenX;
     }, false);
 
     slide.addEventListener('touchend', function(event) {
-        touchendX = event.screenX;
-        handleTouch();
+      touchendX = event.screenX;
+      handleTouch();
     }, false); 
 
     function handleTouch() {
       if (touchendX < touchstartX) {
+        alert('left')
         appendSlide(prevSlide);
       }
       if (touchendX > touchstartX) {
+        alert('right')
         appendSlide(nextSlide);
       }
     }
