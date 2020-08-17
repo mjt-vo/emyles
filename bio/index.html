@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <button class="nav-toggle">menu</button>
     <a href="#" class="nav-link gigs">gigs (under zoom)</a>    
@@ -23,9 +24,13 @@
     <a href="#" class="nav-link blurbs">collected blurbs</a>    
     <a href="#" class="nav-link animals">ANIMALS</a>    
   </nav>
+  <!-- nav-bg-toggle prevents other features from being activated when bg is used to close menu-->
+  <div class="nav-bg-toggle"></div>
 
+  <!-- MAIN -->
   <section class="main">
-    <!-- bio -->
+
+    <!-- BIO -->
     <h1>Eileen Myles</h1>
     <h3><a href="#" class="switch switch-A current">short bio</a> / <a href="#" class="switch switch-A">long bio</a></h3>
     <div class="switch-container" data-target="A">
@@ -47,7 +52,7 @@
     <p>Download Eileen Myles&rsquo; bios (PDF) <a href="#">here</a>.</p>
     <p>Download Eileen Myles&rsquo; CV (PDF) <a href="#">here</a>.</p>
     
-    <!-- pics -->
+    <!-- PICS -->
     <h2>pics</h2>
 
     <h3>for print media</h3>
@@ -93,10 +98,8 @@
     <p class="copyright">Copyright &#169; 2020 Eileen Myles</p>
   </section>
 
-  <!-- slides -->
+  <!-- SLIDES -->
   <div class="slide-container"></div>
-
-  <div class="nav-bg-toggle"></div>
    
   <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', () => {

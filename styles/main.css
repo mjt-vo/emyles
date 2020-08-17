@@ -86,6 +86,7 @@ nav {
   box-shadow: -20px 10px 20px rgba(0,0,0,0.5);
 }
 
+/* nav-bg-toggle prevents other features from being activated when bg is used to close menu */
 .nav-bg-toggle {
   display: none;
   position: fixed;

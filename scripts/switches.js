@@ -1,5 +1,5 @@
-// switches toggle between the display of two things
-// ex: /bio
+// switches toggle between the display of two things; ex: /bio
+
 function initSwitches() {
   // collect all switch containers
   const switchContainers = document.querySelectorAll('.switch-container');

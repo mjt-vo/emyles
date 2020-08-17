@@ -1,3 +1,5 @@
+// nav.js controls opened/closed states of mobile navigation
+
 function initNav() {
   const nav = document.querySelector('nav'),
     toggle = document.querySelector('.nav-toggle'),
@@ -26,6 +28,7 @@ function initNav() {
     }
   });
 
+  // nav-bg-toggle prevents other features from being activated when bg is used to close menu
   bgToggle.addEventListener('click', () => {
     if (active) closeMenu();
   });
