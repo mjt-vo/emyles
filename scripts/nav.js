@@ -1,15 +1,31 @@
 function initNav() {
-  const nav = document.querySelector('nav'),
+  const body = document.querySelector('body'),
+    nav = document.querySelector('nav'),
     toggle = document.querySelector('.nav-toggle');
 
   let active = false;
+
+  function closeMenu () {
+    toggle.innerHTML = 'menu';
+    active = false;
+  }
+
+  body.addEventListener('click', () => {
+    if (active) {
+      nav.classList.remove('active');
+      closeMenu();
+    }
+  });
+
+  nav.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 
   toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
     // closed state
     if (active) {
-      toggle.innerHTML = 'menu';
-      active = false;
+      closeMenu();
     }
     // open state
     else {
