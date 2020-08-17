@@ -7,32 +7,32 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
-  function handleSwipe(slide, nextSlide, prevSlide) {
-    alert('hello, world!');
-    
-    let touchstartX = 0,
-      touchendX = 0;
+  // function handleSwipe(slide, nextSlide, prevSlide) {
+  //   alert('hello, world!');
 
-    slide.addEventListener('touchstart', function(event) {
-      touchstartX = event.screenX;
-    }, false);
+  //   let touchstartX = 0,
+  //     touchendX = 0;
 
-    slide.addEventListener('touchend', function(event) {
-      touchendX = event.screenX;
-      handleTouch();
-    }, false); 
+  //   slide.addEventListener('touchstart', function(event) {
+  //     touchstartX = event.screenX;
+  //   }, false);
 
-    function handleTouch() {
-      if (touchendX < touchstartX) {
-        alert('left')
-        appendSlide(prevSlide);
-      }
-      if (touchendX > touchstartX) {
-        alert('right')
-        appendSlide(nextSlide);
-      }
-    }
-  }
+  //   slide.addEventListener('touchend', function(event) {
+  //     touchendX = event.screenX;
+  //     handleTouch();
+  //   }, false); 
+
+  //   function handleTouch() {
+  //     if (touchendX < touchstartX) {
+  //       alert('left')
+  //       appendSlide(prevSlide);
+  //     }
+  //     if (touchendX > touchstartX) {
+  //       alert('right')
+  //       appendSlide(nextSlide);
+  //     }
+  //   }
+  // }
 
   function appendSlide(slide) {
     const {
@@ -64,7 +64,8 @@ function initSlides() {
       appendSlide(slides[nextIdx]);
     });
 
-    handleSwipe(slideElm, slides[nextIdx], slides[prevIdx]);
+    alert('hello, world');
+    // handleSwipe(slideElm, slides[nextIdx], slides[prevIdx]);
   }
 
   function closeSlides() {
