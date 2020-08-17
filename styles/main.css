@@ -82,7 +82,7 @@ nav {
   transition: box-shadow 0.5s;
 }
 .active .nav-toggle {
-  box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: -10px 5px 10px rgba(0,0,0,0.5);
 }
 
 .nav-link {
