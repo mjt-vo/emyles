@@ -11,23 +11,21 @@ function initSlides() {
     let touchstartX = 0,
       touchendX = 0;
 
-    const slide = document.querySelector('.slide');
-
-    slide.addEventListener('touchstart', (e) => {
+    container.addEventListener('touchstart', (e) => {
       touchstartX = e.changedTouches[0].screenX;
     }, false);
 
-    slide.addEventListener('touchend', (e) => {
+    container.addEventListener('touchend', (e) => {
       touchendX = e.changedTouches[0].screenX;
       handleTouch();
     }, false); 
 
     function handleTouch() {
       if (touchendX < touchstartX) {
-        appendSlide(slides[currentPrevIdx]);
+        appendSlide(slides[currentNextIdx]);
       }
       if (touchendX > touchstartX) {
-        appendSlide(slides[currentNextIdx]);
+        appendSlide(slides[currentPrevIdx]);
       }
     }
   }
@@ -54,7 +52,7 @@ function initSlides() {
     </a>`;
 
     // use slide to advance to next slide
-    document.querySelector('.slide').addEventListener('click', (e) => {
+    document.querySelector('.slide-image').addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
