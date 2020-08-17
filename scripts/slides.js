@@ -17,7 +17,7 @@ function initSlides() {
       touchstartX = e.changedTouches[0].screenX;
     }, false);
 
-    slide.addEventListener('touchend', (e) {
+    slide.addEventListener('touchend', (e) => {
       touchendX = e.changedTouches[0].screenX;
       // handleTouch();
     }, false); 
