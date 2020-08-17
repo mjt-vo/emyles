@@ -7,6 +7,29 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
+  function handleSwipe(nextSlide, prevSlide) {
+    let touchstartX = 0,
+      touchendX = 0;
+
+    slide.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    slide.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      handleTouch();
+    }, false); 
+
+    function handleTouch() {
+      if (touchendX < touchstartX) {
+        appendSlide(prevSlide);
+      }
+      if (touchendX > touchstartX) {
+        appendSlide(nextSlide);
+      }
+    }
+  }
+
   function appendSlide(slide) {
     const {
       src,
@@ -34,6 +57,8 @@ function initSlides() {
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
     });
+
+    handleSwipe(slides[nextIdx], slides[prevIdx])
   }
 
   function closeSlides() {
