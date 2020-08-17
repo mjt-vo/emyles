@@ -7,7 +7,7 @@ function initSlides() {
     currentNextIdx = 0,
     currentPrevIdx = 0;
 
-  function handleSwipe(nextSlide, prevSlide) {
+  function handleSwipe() {
     let touchstartX = 0,
       touchendX = 0;
 
@@ -24,10 +24,10 @@ function initSlides() {
 
     function handleTouch() {
       if (touchendX < touchstartX) {
-        appendSlide(prevSlide);
+        appendSlide(slides[currentPrevIdx]);
       }
       if (touchendX > touchstartX) {
-        appendSlide(nextSlide);
+        appendSlide(slides[currentNextIdx]);
       }
     }
   }
@@ -60,7 +60,7 @@ function initSlides() {
       appendSlide(slides[nextIdx]);
     });
 
-    handleSwipe(slides[nextIdx], slides[prevIdx])
+    handleSwipe();
   }
 
   function closeSlides() {
