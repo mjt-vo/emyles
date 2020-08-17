@@ -11,11 +11,13 @@ function initSlides() {
     let touchstartX = 0,
       touchendX = 0;
 
-    container.addEventListener('touchstart', (e) => {
+    const slide = document.querySelector('.slide');
+
+    slide.addEventListener('touchstart', (e) => {
       touchstartX = e.changedTouches[0].screenX;
     }, false);
 
-    container.addEventListener('touchend', (e) => {
+    slide.addEventListener('touchend', (e) => {
       touchendX = e.changedTouches[0].screenX;
       handleTouch();
     }, false); 
@@ -52,7 +54,7 @@ function initSlides() {
     </a>`;
 
     // use slide to advance to next slide
-    document.querySelector('.slide-image').addEventListener('click', (e) => {
+    document.querySelector('.slide').addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       appendSlide(slides[nextIdx]);
