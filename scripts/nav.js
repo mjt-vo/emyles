@@ -1,28 +1,18 @@
 function initNav() {
-  const body = document.querySelector('body'),
-    nav = document.querySelector('nav'),
-    toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('nav'),
+    toggle = document.querySelector('.nav-toggle'),
+    bgToggle = document.querySelector('.nav-bg-toggle');
 
   let active = false;
 
   function closeMenu () {
+    nav.classList.remove('active');
+    bgToggle.classList.remove('active');
     toggle.innerHTML = 'menu';
     active = false;
   }
 
-  body.addEventListener('click', () => {
-    if (active) {
-      nav.classList.remove('active');
-      closeMenu();
-    }
-  });
-
-  nav.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
     // closed state
     if (active) {
       closeMenu();
@@ -30,7 +20,13 @@ function initNav() {
     // open state
     else {
       toggle.innerHTML = 'close';
+      nav.classList.add('active');
+      bgToggle.classList.add('active');
       active = true;
     }
+  });
+
+  bgToggle.addEventListener('click', () => {
+    if (active) closeMenu();
   });
 }
