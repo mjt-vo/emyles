@@ -13,23 +13,23 @@ function initSlides() {
 
     const slide = document.querySelector('.slide');
 
-    slide.addEventListener('touchstart', function(event) {
-      touchstartX = event.changedTouches[0].screenX;
+    slide.addEventListener('touchstart', (e) => {
+      touchstartX = e.changedTouches[0].screenX;
     }, false);
 
-    slide.addEventListener('touchend', function(event) {
-      touchendX = event.changedTouches[0].screenX;
-      handleTouch();
+    slide.addEventListener('touchend', (e) {
+      touchendX = e.changedTouches[0].screenX;
+      // handleTouch();
     }, false); 
 
-    function handleTouch() {
-      if (touchendX < touchstartX) {
-        appendSlide(prevSlide);
-      }
-      if (touchendX > touchstartX) {
-        appendSlide(nextSlide);
-      }
-    }
+    // function handleTouch() {
+    //   if (touchendX < touchstartX) {
+    //     appendSlide(prevSlide);
+    //   }
+    //   if (touchendX > touchstartX) {
+    //     appendSlide(nextSlide);
+    //   }
+    // }
   }
 
   function appendSlide(slide) {
