@@ -9,10 +9,6 @@ function initNav() {
   let active = false;
 
   function closeMenu () {
-    // unfreeze body
-    const scrollY = body.style.top;
-    body.classList.remove('freeze');
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     nav.classList.remove('active');
     bgToggle.classList.remove('active');
     toggle.innerHTML = 'menu';
@@ -29,9 +25,6 @@ function initNav() {
       toggle.innerHTML = 'close';
       nav.classList.add('active');
       bgToggle.classList.add('active');
-      // freeze body
-      body.style.top = `-${window.scrollY}px`;
-      body.classList.add('freeze');
       active = true;
     }
   });
