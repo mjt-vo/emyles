@@ -9,6 +9,7 @@
 }
 
 html {
+  position: relative;
   background: var(--color-bg);
   color: var(--color-main);
   font-family: 'Roboto Mono', monospace;
@@ -72,7 +73,7 @@ body {
   height: 100vh;
 }
 body.freeze {
-  overflow-y: hidden;
+  position: fixed;
 }
 
 body > * {
