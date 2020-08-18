@@ -69,14 +69,16 @@ function initSlides() {
       </a>
       <p class="slide-caption">${caption}</p>`;
 
+    const slide = document.querySelector('.slide')
+
     // use slide to advance to next slide
-    document.querySelector('.slide').addEventListener('click', (e) => {
+    slide.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       appendSlide(slides[collection][nextIdx], collection);
     });
 
-    handleSwipe();
+    handleSwipe(slide);
   }
 
   function closeSlides() {
@@ -92,26 +94,31 @@ function initSlides() {
     isActive = false;
   }
 
-  function handleSwipe() {
+  function handleSwipe(slide) {
     let touchstartX = 0,
       touchendX = 0;
 
-    container.addEventListener('touchstart', function(event) {
+    slide.addEventListener('touchstart', function(event) {
       touchstartX = event.changedTouches[0].screenX;
     }, false);
 
-    container.addEventListener('touchend', function(event) {
+    slide.addEventListener('touchend', function(event) {
       touchendX = event.changedTouches[0].screenX;
       handleGesture();
     }, false); 
 
     function handleGesture() {
+      // swipe left
       if (touchendX <= touchstartX) {
         appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
       }
-      
+      // swipe right
       if (touchendX >= touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
+      }
+      // tap
+      if (touchendY === touchstartY) {
+        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
       }
     }
   }
