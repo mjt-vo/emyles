@@ -71,7 +71,7 @@ function initSlides() {
 
     const slideElm = document.querySelector('.slide');
 
-    // handleSwipe(slideElm);
+    handleSwipe(slideElm);
 
     // use slide to advance to next slide
     slideElm.addEventListener('click', (e) => {
@@ -115,6 +115,10 @@ function initSlides() {
       // swipe right
       if (touchendX >= touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
+      }
+      // click
+      if (touchendX === touchStartX) {
+        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
       }
     }
   }
