@@ -71,7 +71,7 @@ function initSlides() {
 
     const slideElm = document.querySelector('.slide');
 
-    handleSwipe(slideElm);
+    // handleSwipe(slideElm);
 
     // use slide to advance to next slide
     slideElm.addEventListener('click', (e) => {
