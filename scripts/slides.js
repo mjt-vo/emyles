@@ -98,12 +98,12 @@ function initSlides() {
     let touchstartX = 0,
       touchendX = 0;
 
-    slide.addEventListener('touchstart', function(event) {
-      touchstartX = event.changedTouches[0].screenX;
+    slide.addEventListener('touchstart', function(e) {
+      touchstartX = e.changedTouches[0].screenX;
     }, false);
 
-    slide.addEventListener('touchend', function(event) {
-      touchendX = event.changedTouches[0].screenX;
+    slide.addEventListener('touchend', function(e) {
+      touchendX = e.changedTouches[0].screenX;
       handleGesture();
     }, false); 
 
@@ -117,9 +117,8 @@ function initSlides() {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
       }
 
-      container.addEventListener('click', () => {
-        closeSlides();
-      });
+      slide.removeEventListener('touchstart');
+      slide.removeEventListener('touchend');
     }
   }
 
