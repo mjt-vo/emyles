@@ -363,6 +363,15 @@ img.slide-image:not(.no-border) {
   margin-top: 40px;
 }
 
+.blurb .line {
+  padding-left: 30px;
+  margin-bottom: 0;
+}
+
+.line + p:not(.line) {
+  margin-top: 20px;
+}
+
       /* * * * * */
       /* mobile  */
       /* * * * * */
