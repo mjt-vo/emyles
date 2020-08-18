@@ -69,7 +69,9 @@ function initSlides() {
       </a>
       <p class="slide-caption">${caption}</p>`;
 
-    const slideElm = document.querySelector('.slide')
+    const slideElm = document.querySelector('.slide');
+
+    handleSwipe(slideElm);
 
     // use slide to advance to next slide
     slideElm.addEventListener('click', (e) => {
@@ -77,8 +79,6 @@ function initSlides() {
       e.stopPropagation();
       appendSlide(slides[collection][nextIdx], collection);
     });
-
-    handleSwipe(slideElm);
   }
 
   function closeSlides() {
