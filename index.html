@@ -17,19 +17,6 @@
         document.querySelector('html').classList.add('ready');
         clearInterval(addReady);
       }, 250);
-
-      const spans = document.querySelectorAll('span'),
-        arrow = document.querySelector('.arrow');
-
-      let i = 0;
-      for (i; i < spans.length; i++) {
-        const span = spans[i],
-          { position } = span.dataset;
-
-        span.addEventListener('click', () => {
-          arrow.style = `left: calc(50% + ${position}px)`;
-        })
-      }
     });
   </script>
 </body>
