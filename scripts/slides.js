@@ -1,13 +1,51 @@
+// slides are organized into "collections" so that mult. collections can live on the same page
+
 function initSlides() {
-  const toggles = document.querySelectorAll('.slide-toggle'),
-    container = document.querySelector('.slide-container'),
+  const container = document.querySelector('.slide-container'),
     slides = {};
 
+  // state
   let isActive = false,
     currentNextIdx = 0,
-    currentPrevIdx = 0;
+    currentPrevIdx = 0,
+    currentCollection = 'A';
 
-  function appendSlide(slide) {
+  // collect all collections
+  const collections = document.querySelectorAll('.slide-collection');
+  for (const collectionElm of collections) {    
+    const { collection } = collectionElm.dataset;
+
+    // store collection
+    slides[collection] = {};
+    const collectionObj = slides[collection];
+
+    // collect all slides of a collection
+    const toggles = document.querySelectorAll(`.slide-toggle-${collection}`);
+    let i = 0;
+    for (i; i < toggles.length; i++) {
+      const toggle = toggles[i],
+      { src, caption } = toggle.dataset;
+
+      // store slide
+      collectionObj[i] = {
+        src,
+        caption,
+        nextIdx: i === (toggles.length - 1) ? 0 : i + 1,
+        prevIdx: i === 0 ? toggles.length - 1 : i - 1
+      };
+      const slide = collectionObj[i];
+
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        // add slide
+        appendSlide(slide, collection);
+        // show container
+        container.classList.add('active');
+      });
+    }
+  }  
+
+  function appendSlide(slide, collection) {
     const {
       src,
       caption,
@@ -17,6 +55,7 @@ function initSlides() {
 
     // set state
     isActive = true;
+    currentCollection = collection;
     currentNextIdx = nextIdx;
     currentPrevIdx = prevIdx;
 
@@ -30,7 +69,7 @@ function initSlides() {
     document.querySelector('.slide').addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      appendSlide(slides[nextIdx]);
+      appendSlide(slides[collection][nextIdx], collection);
     });
   }
 
@@ -43,6 +82,11 @@ function initSlides() {
     isActive = false;
   }
 
+  // make container a toggle to close slides
+  container.addEventListener('click', () => {
+    closeSlides();
+  });
+
   // keypress
   document.addEventListener('keydown', (e) => {
     if (isActive) {
@@ -51,41 +95,12 @@ function initSlides() {
           closeSlides();
           break;
         case 'ArrowRight':
-          appendSlide(slides[currentNextIdx]);
+          appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
           break;
         case 'ArrowLeft':
-          appendSlide(slides[currentPrevIdx]);
+          appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
           break;
       }
     }
-  })
-
-  // container
-  container.addEventListener('click', () => {
-    closeSlides();
   });
-
-  // toggles
-  let i = 0;
-  for (i; i < toggles.length; i++) {
-    const toggle = toggles[i],
-      { src, caption } = toggle.dataset;
-
-    // define slide
-    slides[i] = {
-      src,
-      caption,
-      nextIdx: i === (toggles.length - 1) ? 0 : i + 1,
-      prevIdx: i === 0 ? toggles.length - 1 : i - 1
-    };
-    const slide = slides[i];
-
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      // add slide
-      appendSlide(slide);
-      // show container
-      container.classList.add('active');
-    });
-  }
 }
