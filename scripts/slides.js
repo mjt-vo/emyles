@@ -116,10 +116,6 @@ function initSlides() {
       if (touchendX >= touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
       }
-      // tap
-      if (touchendY === touchstartY) {
-        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
-      }
     }
   }
 
