@@ -99,14 +99,14 @@ function initSlides() {
       touchendX = 0;
 
     slide.addEventListener('touchstart', function(e) {
-      touchstartX = e.changedTouches[0].screenX;
       e.preventDefault();
+      touchstartX = e.changedTouches[0].screenX;
     }, false);
 
     slide.addEventListener('touchend', function(e) {
+      e.preventDefault();
       touchendX = e.changedTouches[0].screenX;
       handleGesture();
-      e.preventDefault();
     }, false); 
 
     function handleGesture() {
@@ -117,6 +117,10 @@ function initSlides() {
       // swipe right
       if (touchendX > touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
+      }
+      // tap
+      if (touchendX == touchstartX) {
+        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
       }
     }
   }
