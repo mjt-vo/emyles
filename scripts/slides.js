@@ -116,10 +116,10 @@ function initSlides() {
       if (touchendX > touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
       }
-      // // click
-      // if (touchendX === touchStartX) {
-      //   appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
-      // }
+
+      container.addEventListener('click', () => {
+        closeSlides();
+      });
     }
   }
 
