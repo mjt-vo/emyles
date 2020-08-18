@@ -1,7 +1,8 @@
 // slides are organized into "collections" so that mult. collections can live on the same page
 
-function initSlides() {
-  const container = document.querySelector('.slide-container'),
+function initSlides(windowObj) {
+  const container = document.querySelector('.slide-container')
+    body = document.querySelector('body'),
     slides = {};
 
   // state
@@ -39,6 +40,8 @@ function initSlides() {
         e.preventDefault();
         // add slide
         appendSlide(slide, collection);
+        // freeze body
+        body.classList.add('freeze');
         // show container
         container.classList.add('active');
       });
@@ -74,6 +77,8 @@ function initSlides() {
   }
 
   function closeSlides() {
+    // unfreeze body
+    body.classList.remove('freeze');
     // hide container
     container.classList.remove('active');
     // remove slide

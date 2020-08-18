@@ -69,6 +69,10 @@ a:hover {
 
 body {
   display: flex;
+  height: 100vh;
+}
+body.freeze {
+  overflow-y: hidden;
 }
 
 body > * {
