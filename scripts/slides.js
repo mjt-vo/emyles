@@ -63,9 +63,6 @@ function initSlides() {
     currentNextIdx = nextIdx;
     currentPrevIdx = prevIdx;
 
-    // clear container
-    container.innerHTML = '';
-
     // append slide
     container.innerHTML = `<a href="#" class="slide">
         <img class="slide-image" src="${src}" alt="${caption}"/>
@@ -102,14 +99,14 @@ function initSlides() {
       touchendX = 0;
 
     slide.addEventListener('touchstart', function(e) {
-      e.stopPropagation();
       touchstartX = e.changedTouches[0].screenX;
+      e.preventDefault();
     }, false);
 
     slide.addEventListener('touchend', function(e) {
-      e.stopPropagation();
       touchendX = e.changedTouches[0].screenX;
       handleGesture();
+      e.preventDefault();
     }, false); 
 
     function handleGesture() {
