@@ -75,6 +75,8 @@ function initSlides() {
       e.stopPropagation();
       appendSlide(slides[collection][nextIdx], collection);
     });
+
+    handleSwipe();
   }
 
   function closeSlides() {
@@ -88,6 +90,30 @@ function initSlides() {
     container.innerHTML = '';
     // disable
     isActive = false;
+  }
+
+  function handleSwipe() {
+    let touchstartX = 0,
+      touchendX = 0;
+
+    container.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    container.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      handleGesture();
+    }, false); 
+
+    function handleGesture() {
+      if (touchendX <= touchstartX) {
+        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
+      }
+      
+      if (touchendX >= touchstartX) {
+        appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
+      }
+    }
   }
 
   // make container a toggle to close slides
