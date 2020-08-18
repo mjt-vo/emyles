@@ -426,6 +426,10 @@ img.slide-image:not(.no-border) {
     margin-right: 15px;
   }
 
+  img.slide-image:not(.no-border) {
+    max-width: 250px;
+  }
+
   .slide-toggle {
     margin-bottom: 15px;
   }
