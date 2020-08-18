@@ -63,6 +63,9 @@ function initSlides() {
     currentNextIdx = nextIdx;
     currentPrevIdx = prevIdx;
 
+    // clear container
+    container.innerHTML = '';
+
     // append slide
     container.innerHTML = `<a href="#" class="slide">
         <img class="slide-image" src="${src}" alt="${caption}"/>
