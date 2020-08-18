@@ -109,17 +109,17 @@ function initSlides() {
 
     function handleGesture() {
       // swipe left
-      if (touchendX <= touchstartX) {
+      if (touchendX < touchstartX) {
         appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
       }
       // swipe right
-      if (touchendX >= touchstartX) {
+      if (touchendX > touchstartX) {
         appendSlide(slides[currentCollection][currentPrevIdx], currentCollection);
       }
-      // click
-      if (touchendX === touchStartX) {
-        appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
-      }
+      // // click
+      // if (touchendX === touchStartX) {
+      //   appendSlide(slides[currentCollection][currentNextIdx], currentCollection);
+      // }
     }
   }
 
