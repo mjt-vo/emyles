@@ -29,16 +29,21 @@ body, h1, h2, h3, p, ul {
 /* typography  */
 /* * * * * * * */
 
-h1, h2, h3, p {
+h1, h2 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2, h3, p {
   margin-bottom: 20px;
+}
+
+h3, p {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-h1, h2 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
 h2:not(:first-child),
 .container + h3 {
   margin-top: 60px;
@@ -333,7 +338,7 @@ img.slide-image:not(.no-border) {
       /* * * * */
 
 .gig {
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 .gig:not(:first-of-type) {
   border-top: 1px dashed;
@@ -348,6 +353,14 @@ img.slide-image:not(.no-border) {
 
 .gig-links {
   margin-top: 20px;
+}
+
+      /* * * * * */
+      /* blurbs  */
+      /* * * * * */
+
+.blurb:not(:first-of-type) {
+  margin-top: 40px;
 }
 
       /* * * * * */
