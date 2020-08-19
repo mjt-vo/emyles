@@ -271,7 +271,6 @@ img.cover.small {
   display: block;
 }
 .switch {
-  text-decoration: none;
   color: var(--color-main);
 }
 .switch:not(.current):hover {
@@ -281,6 +280,7 @@ img.cover.small {
   cursor: default;
 }
 .switch:not(.current) {
+  text-decoration: none;
   font-weight: 300;
 }
 
