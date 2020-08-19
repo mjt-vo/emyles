@@ -378,6 +378,10 @@ img.slide-image:not(.no-border) {
   margin-top: 20px;
 }
 
+.blurb span {
+  text-decoration: underline;
+}
+
       /* * * * * */
       /* invert  */
       /* * * * * */
