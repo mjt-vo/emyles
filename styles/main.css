@@ -244,8 +244,7 @@ img.thumb:hover {
 }
 img.cover {
   float: left;
-  margin-right: 20px;
-  margin-bottom: 30px;
+  margin: 0 20px 20px 0;
   max-width: 600px;
 }
 img.cover.small {
@@ -256,7 +255,6 @@ img.cover.small {
       /* switches  */
       /* * * * * * */
 
-/* switches toggle between the display of two things; ex: bio */
 .switch-container > *:nth-child(2),
 .switch-container.active > *:first-child {
   display: none;
