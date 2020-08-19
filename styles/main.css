@@ -255,6 +255,7 @@ img.cover.small {
       /* switches  */
       /* * * * * * */
 
+/* switches toggle between the display of two things; ex: bio */
 .switch-container > *:nth-child(2),
 .switch-container.active > *:first-child {
   display: none;
@@ -460,7 +461,6 @@ img.slide-image:not(.no-border) {
       /* * * * * */
 
 @media (max-width: 1200px) {
-
   nav {
     display: flex;
     flex-direction: column;
