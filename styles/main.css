@@ -393,8 +393,7 @@ img.slide-image:not(.no-border) {
 }
 
 .video:not(:first-of-type) {
-  border-top: 1px dashed;
-  padding-top: 20px;
+  margin-top: 100px;
 }
 
 .video-container {
