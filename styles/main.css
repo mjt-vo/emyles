@@ -528,7 +528,7 @@ img.slide-image:not(.no-border) {
     right: 50px;
   }
 
-  .container.flex > *:not(:last-child) {
+  .container.items > * {
     margin-right: 15px;
   }
 
