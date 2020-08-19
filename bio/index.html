@@ -11,7 +11,6 @@
   <script language="javascript" type="text/javascript" src="../scripts/switches.js"></script>
 </head>
 <body>
-
   <!-- NAV -->
   <nav>
     <button class="nav-toggle">menu</button>
@@ -27,9 +26,7 @@
   <!-- nav-bg-toggle prevents other features from being activated when bg is used to close menu-->
   <div class="nav-bg-toggle"></div>
 
-  <!-- MAIN -->
-  <section class="main">
-
+  <section>
     <!-- BIO -->
     <h1>Eileen Myles</h1> 
     <h3><a href="#" class="switch switch-A current">short bio</a> / <a href="#" class="switch switch-A">long bio</a></h3>
@@ -54,21 +51,20 @@
     
     <!-- PICS -->
     <h2>pics</h2>
-
     <h3>for print media</h3>
-    <div class="container flex">
+    <div class="container items">
       <div class="drawer medium">
         <img src="../images/thumbs/thumb-Myles_Shae-Detar.jpg"/>
-        <p><a href="../download/Myles_Shae_Detar.jpg" download>Download</a> (3840 x 5760, 300 dpi). Photo by Shae Detar.</p>
+        <p class="caption"><a href="../download/Myles_Shae_Detar.jpg" download>Download</a> (3840 x 5760, 300 dpi). Photo by Shae Detar.</p>
       </div>
       <div class="drawer medium">
         <img src="../images/thumbs/thumb-Myles_Peggy-O-Brien.jpg"/>
-        <p><a href="../download/Myles_Peggy_Obrien.jpg" download>Download</a> (2432 x 4320, 72 dpi). Photo by Peggy O&rsquo;Brien.</p>
+        <p class="caption"><a href="../download/Myles_Peggy_Obrien.jpg" download>Download</a> (2432 x 4320, 72 dpi). Photo by Peggy O&rsquo;Brien.</p>
       </div>
     </div>
 
     <h3>pictures</h3>
-    <div class="container flex slide-collection" data-collection="A">
+    <div class="container slide-collection items" data-collection="A">
       <a href="#" class="slide-toggle slide-toggle-A" data-src="../images/slides/slide-4poets.jpg" data-caption="4 poets">
         <img class="thumb" src="../images/thumbs/thumb-4poets.jpg"/>
       </a>
