@@ -535,9 +535,12 @@ img.slide-image:not(.no-border) {
   img.slide-image:not(.no-border) {
     max-width: 250px;
   }
-
   .slide-toggle {
     margin-bottom: 15px;
+  }
+
+  .video:not(:first-of-type) {
+    margin-top: 80px;
   }
 }
 
