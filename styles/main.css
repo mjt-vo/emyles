@@ -26,9 +26,9 @@ body, h1, h2, h3, p, ul {
   font-weight: 300;
 }
 
-/* * * * * * * */
-/* typography  */
-/* * * * * * * */
+      /* * * * * * * */
+      /* typography  */
+      /* * * * * * * */
 
 h1, h2 {
   font-size: 3rem;
@@ -36,11 +36,11 @@ h1, h2 {
 }
 
 h1,
-h1 + h3 {
+h1 + h3.header {
   margin-bottom: var(--margin-l);
 }
 
-h1 + h3 {
+h1 + h3.header {
   margin-top: -40px;
 }
 
@@ -526,7 +526,7 @@ img.slide-image:not(.no-border) {
 
   section {
     padding: 15px;
-    padding-top: 50px;
+    padding-top: 100px;
     width: 100%;
   }
 
