@@ -35,8 +35,13 @@ h1, h2 {
   line-height: 3rem;
 }
 
-h1 {
-  margin-bottom: 30px;
+h1,
+h1 + h3 {
+  margin-bottom: var(--margin-l);
+}
+
+h1 + h3 {
+  margin-top: -40px;
 }
 
 h3, p {
@@ -44,10 +49,12 @@ h3, p {
   line-height: 2rem;
 }
 
-h2:not(.no-margin-bottom),
-h3:not(.no-margin-bottom),
-p:not(.no-margin-bottom) {
+h2, h3, p {
   margin-bottom: 20px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
 }
 
 h2:not(:first-child),
