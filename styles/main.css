@@ -84,7 +84,6 @@ h3 {
 }
 h3 a,
 h3 span {
-  text-decoration: none;
   font-weight: 300;
 }
 
@@ -319,7 +318,6 @@ img.cover.small {
 .switch.current {
   cursor: default;
   font-weight: 500;
-  text-decoration: underline;
 }
 .switch:not(.current) {
   text-decoration: none;
