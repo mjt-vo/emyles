@@ -13,10 +13,10 @@
 
 html {
   position: relative;
-  background: var(--color-bg);
-  color: var(--color-main);
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
+  color: var(--color-main);
+  background: var(--color-bg);
 }
 
 /* reset */
@@ -38,11 +38,11 @@ h1, h2 {
 }
 
 h1,
-h1 + h3.header {
+h3.header {
   margin-bottom: var(--margin-l);
 }
 
-h1 + h3.header {
+h3.header {
   margin-top: -40px;
 }
 
@@ -57,13 +57,11 @@ h2, h3, p {
 
 .no-margin-bottom,
 .line,
-.gig p,
 .post > *:last-child {
   margin-bottom: 0;
 }
 
-.line,
-.gig p {
+.line {
   padding-left: 30px;
   text-indent: -30px;
 }
@@ -147,6 +145,9 @@ section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+.container.space-between {
+  justify-content: space-between;
 }
 .container > * {
   align-self: flex-start;
@@ -287,6 +288,8 @@ img.cover {
 }
 img.no-float {
   float: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 img.cover.medium {
   max-width: 300px;
@@ -492,6 +495,14 @@ img.slide-image:not(.no-border) {
   margin-top: var(--margin-xl);
 }
 
+      /* * * * * * * * * */
+      /* art journalism  */
+      /* * * * * * * * * */
+
+.journalism-col {
+  max-width: calc(100% - 500px);
+}
+
       /* * * * * */
       /* mobile  */
       /* * * * * */
@@ -579,18 +590,17 @@ img.slide-image:not(.no-border) {
   img.cover {
     float: none;
   }
-  img.right {
-    margin-left: 0;
-    margin-bottom: 80px;
-  }
-  img.right + div {
-    float: none;
-    width: 100%;
-  }
 
   .video:not(:first-of-type),
   .animal:not(:first-of-type) {
     margin-top: 80px;
+  }
+
+  .journalism-col {
+    max-width: 100%;
+  }
+  .journalism-col + img {
+    margin-top: var(--margin-l);
   }
 }
 
