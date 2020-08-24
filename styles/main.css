@@ -60,6 +60,11 @@ h2, h3, p {
   margin-bottom: 0;
 }
 
+.line {
+  padding-left: 30px;
+  text-indent: -30px;
+}
+
 .line + p:not(.line) {
   margin-top: var(--margin-s);
 }
@@ -457,7 +462,7 @@ img.slide-image:not(.no-border) {
 }
 
 .blurb .line {
-  padding-left: 30px;
+  padding-left: 60px;
 }
 
 .blurb span {
