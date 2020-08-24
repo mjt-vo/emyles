@@ -566,6 +566,10 @@ img.slide-image:not(.no-border) {
     margin-bottom: 15px;
   }
 
+  img.cover {
+    float: none;
+  }
+
   .video:not(:first-of-type) {
     margin-top: 80px;
   }
