@@ -584,10 +584,8 @@ img.slide-image:not(.no-border) {
     margin-right: 15px;
   }
   .drawer {
+    margin-bottom: 20px;
     width: 250px;
-  }
-  .drawer:not(:first-of-type) {
-    margin-top: 20px;
   }
 
   img.slide-image:not(.no-border) {
