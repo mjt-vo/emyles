@@ -89,6 +89,7 @@ h3 span {
 
 .caption {
   margin-top: -10px;
+  padding-right: 5px;
 }
 
 a {
@@ -157,6 +158,11 @@ section {
 
 .drawer {
   width: 200px;
+  color: var(--color-main);
+  text-decoration: none;
+}
+a.drawer:hover {
+  color: yellow;
 }
 
 .margin-top-l {
@@ -279,7 +285,7 @@ img.thumb {
 img.thumb:hover {
   border-color: yellow;
 }
-img.cover {
+img.float {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -290,10 +296,10 @@ img.no-float {
   margin-left: 0;
   margin-right: 0;
 }
-img.cover.medium {
+img.float.medium {
   max-width: 300px;
 }
-img.cover.small {
+img.float.small {
   max-width: 200px;
 }
 
