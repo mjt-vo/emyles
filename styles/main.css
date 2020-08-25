@@ -583,6 +583,9 @@ img.slide-image:not(.no-border) {
   .container.items > * {
     margin-right: 15px;
   }
+  .drawer {
+    width: 300px;
+  }
 
   img.slide-image:not(.no-border) {
     max-width: 250px;
