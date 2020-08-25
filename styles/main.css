@@ -156,6 +156,11 @@ section {
   margin-right: var(--margin-s);
 }
 
+.column {
+  width: calc(100% - 500px);
+  text-align: left;
+}
+
 .drawer {
   width: 200px;
   color: var(--color-main);
@@ -164,6 +169,7 @@ section {
 a.drawer:hover {
   color: yellow;
 }
+
 
 .margin-top-l {
   margin-top: var(--margin-l);
@@ -499,14 +505,6 @@ img.slide-image:not(.no-border) {
   margin-top: var(--margin-xl);
 }
 
-      /* * * * * * * * * */
-      /* art journalism  */
-      /* * * * * * * * * */
-
-.journalism-col {
-  max-width: calc(100% - 500px);
-}
-
       /* * * * * */
       /* mobile  */
       /* * * * * */
@@ -604,10 +602,10 @@ img.slide-image:not(.no-border) {
     margin-top: 80px;
   }
 
-  .journalism-col {
-    max-width: 100%;
+  .column {
+    width: 100%;
   }
-  .journalism-col + img {
+  .column + img {
     margin-top: var(--margin-l);
   }
 }
