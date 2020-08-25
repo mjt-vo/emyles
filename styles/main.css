@@ -166,8 +166,16 @@ section {
   color: var(--color-main);
   text-decoration: none;
 }
+.drawer img {
+  opacity: 1;
+  transition: var(--hover-transition);
+}
 a.drawer:hover {
   color: yellow;
+}
+
+a.drawer:hover img {
+  opacity: 0.7;
 }
 
 
