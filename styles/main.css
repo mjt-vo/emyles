@@ -586,6 +586,9 @@ img.slide-image:not(.no-border) {
   .drawer {
     width: 250px;
   }
+  .drawer:not(:first-of-type) {
+    margin-top: 20px;
+  }
 
   img.slide-image:not(.no-border) {
     max-width: 250px;
