@@ -6,6 +6,7 @@
   --color-main: #dcdba0;
   --color-bg: #082567;
   --hover-transition: opacity 0.2s;
+  --margin-xs: 10px;
   --margin-s: 20px;
   --margin-l: 60px;
   --margin-xl: 100px;
@@ -99,6 +100,12 @@ a {
 a:hover {
   color: var(--color-main);
 }
+.parent-link {
+  text-decoration: none;
+}
+.parent-link:before {
+  content: " ";
+}
 
 .contact {
   text-align: right;
@@ -182,6 +189,9 @@ a.drawer:hover img {
 }
 .margin-bottom-s {
   margin-bottom: var(--margin-s);
+}
+.margin-bottom-xs {
+  margin-bottom: var(--margin-xs);
 }
 
 .border {
