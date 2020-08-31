@@ -108,6 +108,10 @@ a:hover {
   content: " ";
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 .contact {
   text-align: right;
 }
@@ -196,6 +200,12 @@ a.drawer:hover img {
 }
 .margin-bottom-xs {
   margin-bottom: var(--margin-xs);
+}
+.margin-left-l {
+  margin-left: var(--margin-l);
+}
+span.margin-left-l {
+  display: inline-block;
 }
 
 .border {
