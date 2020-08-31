@@ -67,7 +67,8 @@ h2, h3, p {
   text-indent: -30px;
 }
 
-.line + p:not(.line) {
+.line + p:not(.line),
+.stanza {
   margin-top: var(--margin-s);
 }
 
