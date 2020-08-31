@@ -167,6 +167,9 @@ section {
   width: calc(100% - 500px);
   text-align: left;
 }
+.image-column {
+  width: 400px;
+}
 
 .drawer {
   width: 200px;
