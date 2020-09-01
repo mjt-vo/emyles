@@ -46,6 +46,9 @@ h3.header {
 h3.header {
   margin-top: -40px;
 }
+h3.header a {
+  text-decoration: none;
+}
 
 h3, p {
   font-size: 1.5rem;
@@ -161,6 +164,9 @@ section {
 .container.space-between {
   justify-content: space-between;
 }
+.container.reverse {
+  flex-direction: row-reverse;
+}
 .container > * {
   align-self: flex-start;
 }
@@ -194,6 +200,9 @@ a.drawer:hover img {
 
 .margin-top-l {
   margin-top: var(--margin-l);
+}
+.margin-top-xl {
+  margin-top: var(--margin-xl);
 }
 .margin-bottom-s {
   margin-bottom: var(--margin-s);
@@ -639,6 +648,12 @@ img.slide-image:not(.no-border) {
     margin-top: 80px;
   }
 
+  .container {
+    justify-content: flex-start;
+  }
+  .container.reverse {
+    justify-content: flex-end;
+  }
   .column {
     width: 100%;
   }
