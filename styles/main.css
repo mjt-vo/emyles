@@ -501,6 +501,7 @@ img.slide-image:not(.no-border) {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  background: rgba(0,0,0,0.4);
 }
 
 .video-container iframe {
