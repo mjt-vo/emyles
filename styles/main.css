@@ -73,6 +73,13 @@ h3, p {
 }
 
 /* for poems */
+.page {
+  display: inline-block;
+  background: var(--color-main);
+  padding: 150px 250px 175px 235px;
+  color: black;
+}
+
 .line {
   padding-left: 30px;
   text-indent: -30px;
@@ -636,6 +643,16 @@ img.slide-image:not(.no-border) {
   .video:not(:first-of-type),
   .animal:not(:first-of-type) {
     margin-top: 80px;
+  }
+
+  /* * * * */
+  /* poem  */
+  /* * * * */
+  .page {
+    display: block;
+    padding: 0;
+    background: inherit;
+    color: inherit;
   }
 }
 
