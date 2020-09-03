@@ -504,7 +504,7 @@ img.slide-image:not(.no-border) {
       /* * * * * */
 
 .blurb:not(:first-of-type) {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .blurb .line {
   padding-left: 60px;
