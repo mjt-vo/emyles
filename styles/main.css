@@ -181,6 +181,7 @@ section {
 }
 
 .drawer {
+  margin-bottom: var(--margin-s);
   width: 200px;
   color: var(--color-main);
   text-decoration: none;
@@ -188,6 +189,9 @@ section {
 .drawer img {
   opacity: 1;
   transition: var(--hover-transition);
+}
+.drawer .caption {
+  margin-bottom: 0;
 }
 /* drawers as links are all on the books page */
 a.drawer:hover {
@@ -613,7 +617,7 @@ img.slide-image:not(.no-border) {
     margin-right: 15px;
   }
   .drawer {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 250px;
   }
   .column {
