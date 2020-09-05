@@ -117,7 +117,10 @@ a:hover {
 }
 
 .copyright {
+  display: inline-block;
   margin-top: 120px;
+  border-top: 1px solid;
+  padding-top: 15px;
 }
 
       /* * * * * */
