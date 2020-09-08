@@ -646,6 +646,7 @@ img.slide-image:not(.no-border) {
   /* * * * * */
   img.float {
     float: none;
+    margin-right: 0;
   }
 
   /* * * * */
