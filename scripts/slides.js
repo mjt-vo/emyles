@@ -27,6 +27,10 @@ function initSlides() {
       const toggle = toggles[i],
       { src, caption } = toggle.dataset;
 
+      // preload image
+      const preload = new Image();
+      preload.src = src;
+
       // store slide
       collectionObj[i] = {
         src,
