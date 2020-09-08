@@ -431,6 +431,7 @@ img.slide-image:not(.no-border) {
 .slide-caption {
   margin-top: 10px;
   text-align: center;
+  max-width: 300px;
 }
 
       /* * * * */
