@@ -366,13 +366,9 @@ img.float {
       /* switches  */
       /* * * * * * */
 
-/* switches toggle between the display of two things; ex: bio, recordings */
-.switch-container > *:nth-child(2),
-.switch-container.active > *:first-child {
+/* switches toggle between the display of multiple things; ex: bio, recordings */
+.switch-container > *:not(.active) {
   display: none;
-}
-.switch-container.active > *:nth-child(2) {
-  display: block;
 }
 .switch {
   color: var(--color-main);

@@ -1,4 +1,4 @@
-// switches toggle between the display of two things; ex: /bio
+// switches toggle between the display of multiple things; ex: /bio
 
 function initSwitches() {
   // collect all switch containers
@@ -16,16 +16,16 @@ function initSwitches() {
       switchElm.addEventListener('click', (e) => {
         e.preventDefault();
 
-        if (idx > 0) {
-          switchContainer.classList.add('active');
-          switches[0].classList.remove('current');
+        // set current switch to current state
+        let j = 0;
+        for (j; j < switches.length; j++) {
+          if (j !== idx) {
+            switches[j].classList.remove('current');
+            switchContainer.children[j].classList.remove('active');
+          }
         }
-        else {
-          switchContainer.classList.remove('active');
-          switches[1].classList.remove('current');
-        }
-
         switchElm.classList.add('current');
+        switchContainer.children[idx].classList.add('active');
       });
     }
 
