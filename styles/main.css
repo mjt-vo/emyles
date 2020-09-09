@@ -370,6 +370,9 @@ img.float {
 .switch-container > *:not(.active) {
   display: none;
 }
+.switches {
+  line-height: 2.5rem;
+}
 .switch {
   color: var(--color-main);
 }
