@@ -382,6 +382,7 @@ img.float {
 .switch.current {
   cursor: default;
   font-weight: 500;
+  outline: none;
 }
 .switch:not(.current) {
   text-decoration: none;
