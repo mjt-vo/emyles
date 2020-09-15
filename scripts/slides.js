@@ -25,7 +25,7 @@ function initSlides() {
     let i = 0;
     for (i; i < toggles.length; i++) {
       const toggle = toggles[i],
-      { src, caption } = toggle.dataset;
+       { src, caption } = toggle.dataset;
 
       // preload image
       const preload = new Image();
@@ -70,8 +70,9 @@ function initSlides() {
     // append slide
     container.innerHTML = `<a href="#" class="slide">
         <img class="slide-image" src="${src}" alt="${caption}"/>
-      </a>
-      <p class="slide-caption">${caption}</p>`;
+      </a>`;
+    // add caption if defined
+    if (caption) container.innerHTML += `<p class="slide-caption">${caption}</p>`;
 
     const slideElm = document.querySelector('.slide');
 
