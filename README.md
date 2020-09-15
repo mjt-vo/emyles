@@ -64,7 +64,7 @@ For slides to work, these elements must be included on the page:
 </div>
 ```
 
-Slide-collections must a data-attr *collection*. This enables the collection of all of a slide-collection's slide-toggles, which must have a class `.slide-toggle-${collection}`. Slide-toggles also must have the data-attr's *src*, which points to the slide's source file, and *caption*. The *caption* can be left blank, but should be specified.
+Slide-collections must have a data-attr *collection*. This enables the identification of all of a slide-collection's slide-toggles, which must have a class `.slide-toggle-${collection}`. Slide-toggles also must have the data-attr's *src*, which points to the slide's source file, and *caption*.
 
 ## Switches
 
