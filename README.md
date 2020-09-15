@@ -11,7 +11,7 @@ Most layout design is achieved via flex-box. The *body* itself is set to flex; *
 
 ### Images
 
-Images will grow to 100% the width of their parents, or can a size can be set via the `.large`, `.medium` and `.small` classes.
+Images will grow to 100% the width of their parents, or can be set to specific sizes via the `.large`, `.medium` and `.small` classes.
 
 Images can be set to float via the `.float` class.
 
