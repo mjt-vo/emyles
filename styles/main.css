@@ -35,7 +35,7 @@ body, h1, h2, h3, p, ul {
 
 h1, h2 {
   font-size: 3rem;
-  line-height: 3rem;
+  line-height: 3.7rem;
 }
 
 h1,
@@ -176,7 +176,7 @@ section {
 }
 
 .column {
-  width: calc(100% - 500px);
+  width: calc(100% - 400px);
   text-align: left;
 }
 .image-column {
@@ -537,10 +537,6 @@ img.slide-image:not(.no-border) {
       /* * * * * * * * * */
 
 @media (min-width: 1101px) and (max-width: 1350px) {
-  .column {
-    width: calc(100% - 400px);
-  }
-
   img.large {
     max-width: 300px;
   }
