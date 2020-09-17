@@ -532,11 +532,83 @@ img.slide-image:not(.no-border) {
   text-decoration: underline;
 }
 
-      /* * * * * */
-      /* mobile  */
-      /* * * * * */
+      /* * * * * * * * * */
+      /* responsiveness  */
+      /* * * * * * * * * */
 
-@media (max-width: 1200px) {
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .column {
+    width: calc(100% - 400px);
+  }
+
+  img.large {
+    max-width: 300px;
+  }
+  .column img.float {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  section {
+    width: calc(100% - 280px);
+  }
+
+  .column {
+    width: calc(100% - 300px);
+  }
+
+  .page {
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+    width: 400px;
+  }
+
+  img.large,
+  img.medium {
+    max-width: 200px;
+  }
+  .column img.float {
+    float: none;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    width: 250px;
+  }
+  .nav-link.nav-link.a-poem {
+    height: 29px;
+  }
+  .nav-link.animals {
+    height: 46px;
+  }
+  .nav-link.back {
+    width: 64px;
+    height: 40px;
+  }
+  .nav-link.bio {
+    height: 72px;
+  }
+  .nav-link.blurbs {
+    height: 46px;
+  }
+  .nav-link.books {
+    height: 29px;
+  }
+  .nav-link.gigs {
+    height: 50px;
+  }
+  .nav-link.journalism {
+    height: 42px;
+  }
+  .nav-link.recordings {
+    height: 39px;
+  }
+}
+
+@media (max-width: 800px) {
   /* * * */
   /* nav */
   /* * * */
