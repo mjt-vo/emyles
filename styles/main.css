@@ -571,6 +571,11 @@ img.slide-image:not(.no-border) {
     margin-right: 0;
   }
 
+  .arrow {
+    left: auto;
+    right: 50px;
+  }
+
   .nav-link {
     width: 250px;
   }
