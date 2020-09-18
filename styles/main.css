@@ -705,7 +705,7 @@ img.slide-image:not(.no-border) {
   /* slides  */
   /* * * * * */
   img.slide-image:not(.no-border) {
-    max-width: 250px;
+    max-width: 300px;
   }
   .slide-toggle {
     margin-bottom: 15px;
