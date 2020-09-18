@@ -424,7 +424,8 @@ img.float {
 
 img.slide-image:not(.no-border) {
   margin-bottom: 0;
-  max-width: 300px;
+  max-height: calc(100vh - 300px);
+  width: auto;
   border-width: 3px;
 }
 
