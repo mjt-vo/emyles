@@ -29,15 +29,15 @@ For the nav to work, these elements must be included on the page:
 <!-- NAV -->
 <nav>
   <button class="nav-toggle">menu</button>
-  <a href="../gigs" class="nav-link gigs" tabindex="10">gigs (under zoom)</a>
-  <a href="../bio" class="nav-link bio" tabindex="10">bio/cv, pics</a>
-  <a href="../books" class="nav-link books" tabindex="10">books</a>
-  <a href="../recordings" class="nav-link recordings" tabindex="10">recordings</a>
-  <a href="../art-journalism" class="nav-link journalism" tabindex="10">art journalism</a>
-  <a href="../a-poem" class="nav-link a-poem" tabindex="10">a poem</a>
-  <a href="../collected-blurbs" class="nav-link blurbs" tabindex="10">collected blurbs</a>
-  <a href="../animals" class="nav-link animals" tabindex="10">ANIMALS</a>
-  <a href="../" class="nav-link back">home</a>
+  <a href="https://www.eileenmyles.com/gigs" class="nav-link gigs" tabindex="10">gigs (under zoom)</a>
+  <a href="https://www.eileenmyles.com/bio" class="nav-link bio" tabindex="10">bio/cv, pics</a>
+  <a href="https://www.eileenmyles.com/books" class="nav-link books" tabindex="10">books</a>
+  <a href="https://www.eileenmyles.com/recordings" class="nav-link recordings" tabindex="10">recordings</a>
+  <a href="https://www.eileenmyles.com/art-journalism" class="nav-link journalism" tabindex="10">art journalism</a>
+  <a href="https://www.eileenmyles.com/a-poem" class="nav-link a-poem" tabindex="10">a poem</a>
+  <a href="https://www.eileenmyles.com/collected-blurbs" class="nav-link blurbs" tabindex="10">collected blurbs</a>
+  <a href="https://www.eileenmyles.com/animals" class="nav-link animals" tabindex="10">ANIMALS</a>
+  <a href="https://www.eileenmyles.com/" class="nav-link back">home</a>
 </nav>
 <!-- nav-bg-toggle prevents other features from being activated when bg is used to close menu-->
 <div class="nav-bg-toggle"></div>
@@ -58,8 +58,8 @@ For slides to work, these elements must be included on the page:
 
 ```
 <div class="container slide-collection items" data-collection="Honey">
-  <a href="#" class="slide-toggle slide-toggle-Honey" data-src="../images/slides/slide-honey-Beautiful-sensitive-prancing.jpg" data-caption="beautiful sensitive prancing" tabindex="1">
-    <img class="thumb" src="../images/thumbs/thumb-honey-Beautiful-sensitive-prancing.jpg"/>
+  <a href="#" class="slide-toggle slide-toggle-Honey" data-src="https://www.eileenmyles.com/images/slides/slide-honey-Beautiful-sensitive-prancing.jpg" data-caption="beautiful sensitive prancing" tabindex="1">
+    <img class="thumb" src="https://www.eileenmyles.com/images/thumbs/thumb-honey-Beautiful-sensitive-prancing.jpg"/>
   </a>
 </div>
 ```
