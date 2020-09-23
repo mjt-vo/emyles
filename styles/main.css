@@ -486,7 +486,10 @@ img.slide-image:not(.no-border) {
 .post {
   padding-bottom: 35px;
 }
-.post:not(:first-of-type) {
+.post.expired {
+  display: none;
+}
+.post:not(.expired) + .post {
   border-top: 1px dashed;
   padding-top: 20px;
 }
