@@ -493,6 +493,12 @@ img.slide-image:not(.no-border) {
   border-top: 1px dashed;
   padding-top: 20px;
 }
+.no-gigs {
+  display: none;
+}
+.no-gigs.display {
+  display: block;
+}
 
       /* * * * */
       /* video */
